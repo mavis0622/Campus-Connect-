@@ -6,9 +6,9 @@
 
 <p align="justify">
 
-O **Campus Connect** é uma plataforma em desenvolvimento para estudantes universitários, criada com o objetivo de facilitar a comunicação, a interação e a colaboração entre alunos dentro do ambiente acadêmico.
+O **Campus Connect** é um sistema em desenvolvimento para estudantes universitários, criada com o objetivo de facilitar a comunicação, a interação e a colaboração entre alunos dentro do ambiente acadêmico.
 
-A plataforma reunirá diferentes comunidades e funcionalidades relacionadas à vida universitária, permitindo que estudantes encontrem grupos de estudo, oportunidades acadêmicas e profissionais, eventos, materiais, projetos e outros alunos com interesses semelhantes.
+O sistema reunirá diferentes comunidades e funcionalidades relacionadas à vida universitária, permitindo que estudantes encontrem grupos de estudo, oportunidades acadêmicas e profissionais, eventos, materiais, projetos e outros alunos com interesses semelhantes.
 
 O principal objetivo é tornar a experiência universitária mais **prática, organizada, colaborativa e conectada**, reunindo em um único ambiente informações que atualmente ficam espalhadas em redes sociais, grupos de mensagens e outras plataformas.
 
@@ -30,13 +30,13 @@ O **Campus Connect** busca solucionar esse problema criando um único ambiente o
 
 ## 🎯 Objetivo Geral
 
-Desenvolver um site universitário capaz de reunir estudantes em um único ambiente digital, facilitando o acesso a informações acadêmicas, oportunidades, materiais, projetos e conexões entre alunos.
+Desenvolver um sistema universitário capaz de reunir estudantes em um único ambiente digital, facilitando o acesso a informações acadêmicas, oportunidades, materiais, projetos e conexões entre alunos.
 
 ## 👥 Público-alvo
 
 O público-alvo do **Campus Connect** são estudantes universitários que desejam facilitar sua rotina acadêmica e aumentar a interação com outros alunos.
 
-O site será especialmente útil para estudantes que procuram:
+O sistema será especialmente útil para estudantes que procuram:
 
 - Grupos de estudo;
 - Oportunidades de estágio;
@@ -51,7 +51,7 @@ O site será especialmente útil para estudantes que procuram:
 ## ⚙️ Requisitos Funcionais
 
 ### 🏠 Meu Campus
-Página inicial do site, onde o estudante poderá visualizar avisos, novidades, destaques e conteúdos importantes relacionados à faculdade.
+Página inicial do sistema, onde o estudante poderá visualizar avisos, novidades, destaques e conteúdos importantes relacionados à faculdade.
 
 ### 👥 Grupos
 Espaço destinado à criação e participação em grupos relacionados a matérias, cursos, estudos e interesses em comum.
@@ -113,6 +113,6 @@ O projeto está atualmente em sua primeira etapa, com foco na definição dos re
 ---
 
 <p align="center">
-  🎓 <b>Campus Connect</b><br>
+  🎓 <b>Code Connect</b><br>
   Conectando estudantes, ideias e oportunidades.
 </p>
