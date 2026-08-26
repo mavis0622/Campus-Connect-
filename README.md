@@ -113,7 +113,8 @@ https://www.figma.com/site/cKvqn85n4E1748PTPWzfz9/Untitled?node-id=0-1&t=l4MjLjP
 
 O projeto está atualmente em sua primeira etapa, com foco na definição dos requisitos, criação do protótipo, organização do repositório e desenvolvimento da estrutura inicial das páginas.
 
- **Cronograma de Entreg**
+ **Cronograma de Entrega**
+ 
  https://1drv.ms/x/c/3eddea53cb60e163/IQDVai3O-CH1Tp1MS-gotFzLAcMDvEAkrYBeK9HcSOoyDwM?e=RNocOy
 
 ---
