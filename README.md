@@ -104,6 +104,9 @@ Dessa forma, o Campus Connect poderá contribuir para uma experiência universit
 - `GitHub`
 - `Figma / Canva`
 
+##  Protótipo Figama 
+https://www.figma.com/site/cKvqn85n4E1748PTPWzfz9/Untitled?node-id=0-1&t=l4MjLjPTmWE33dET-1
+
 ## 📈 Status do Projeto
 
 🚧 **Em desenvolvimento**
