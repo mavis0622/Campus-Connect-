@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Conta - Campus Connect</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(223, 223, 223);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 30px 15px;
+        }
+
+        .container {
+            display: flex;
+            width: 800px;
+            max-width: 100%;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .cadastro {
+            width: 50%;
+            padding: 30px;
+        }
+
+        .informacoes {
+            width: 50%;
+            background-color: rgb(23, 23, 184);
+            color: white;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 {
+            color: rgb(23, 23, 184);
+        }
+
+        .cadastro > p {
+            color: gray;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+
+        .termos {
+            margin: 5px 0 15px;
+        }
+
+        .termos summary {
+            color: rgb(23, 23, 184);
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .termos p {
+            font-size: 13px;
+            line-height: 1.4;
+            color: #555;
+        }
+
+        .aceitar-termos {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+            margin: 15px 0;
+        }
+
+        .aceitar-termos input {
+            margin-top: 3px;
+        }
+
+        .aceitar-termos label {
+            font-size: 14px;
+        }
+
+        .botao-criar {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: rgb(23, 23, 184);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .botao-criar:hover {
+            background-color: rgb(60, 60, 220);
+        }
+
+        .entrar {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .entrar a,
+        .voltar {
+            color: rgb(23, 23, 184);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .informacoes h2 {
+            font-size: 25px;
+        }
+
+        .informacoes p {
+            font-size: 17px;
+            margin-top: 15px;
+        }
+
+        .voltar-area {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .cadastro,
+            .informacoes {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="cadastro">
+            <h1>Criar Conta</h1>
+            <p>Preencha seus dados para começar.</p>
+
+            <!-- Protótipo visual: os dados ainda não são salvos em banco de dados. -->
+            <form>
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+                <label for="curso">Seu Curso</label>
+                <input type="text" id="curso" name="curso" placeholder="Digite seu curso" required>
+
+                <label for="semestre">Semestre</label>
+                <input type="text" id="semestre" name="semestre" placeholder="Digite seu semestre" required>
+
+                <label for="email">Email institucional</label>
+                <input type="email" id="email" name="email" placeholder="seu.nome@faculdade.edu.br" required>
+
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Criar uma senha" required>
+
+                <label for="confirmar">Confirmar senha</label>
+                <input type="password" id="confirmar" name="confirmar" placeholder="Confirmar sua senha" required>
+
+                <details class="termos">
+                    <summary>Leia os termos de uso e privacidade</summary>
+
+                    <p><strong>Privacidade e Proteção dos dados.</strong><br>
+                        O Campus Connect utiliza dados como nome, curso, semestre e e-mail apenas para o funcionamento do sistema. Os dados serão tratados conforme a LGPD e não serão usados para outras finalidades sem autorização.
+                    </p>
+
+                    <p><strong>Uso da plataforma.</strong><br>
+                        O usuário deve utilizar o Campus Connect de forma respeitosa e para fins acadêmicos. Não são permitidas ofensas, ameaças, fraudes, conteúdos ilegais ou uso indevido das informações de outros alunos.
+                    </p>
+
+                    <p><strong>Encontros entre usuários.</strong><br>
+                        O Campus Connect apenas facilita o contato entre estudantes. Encontros presenciais são de responsabilidade dos próprios usuários, e a plataforma não organiza ou acompanha esses encontros.
+                    </p>
+
+                    <p><strong>Vagas, vendas e pagamentos.</strong><br>
+                        O Campus Connect apenas divulga vagas, oportunidades e produtos de outros usuários. A plataforma não realiza inscrições diretas em vagas, não recebe pagamentos e não participa de negociações entre os usuários.
+                    </p>
+                </details>
+
+                <div class="aceitar-termos">
+                    <input type="checkbox" id="aceitar" name="aceitar" required>
+                    <label for="aceitar">Li e aceito os termos de uso e privacidade.</label>
+                </div>
+
+                <!-- Como o projeto ainda é somente HTML/CSS, este link simula a conclusão do cadastro. -->
+                <a href="index.html" class="botao-criar">Criar Conta</a>
+            </form>
+
+            <div class="entrar">
+                Já tem conta? <a href="index.html">Entrar</a>
+            </div>
+
+            <div class="voltar-area">
+                <a class="voltar" href="index.html">← Voltar para a página principal</a>
+            </div>
+        </div>
+
+        <div class="informacoes">
+            <h2>Faça parte da comunidade da sua faculdade.</h2>
+            <p>Conecte-se com colegas.</p>
+            <p>Compartilhe conhecimentos.</p>
+            <p>Descubra oportunidades.</p>
+        </div>
+    </div>
+</body>
+</html>
