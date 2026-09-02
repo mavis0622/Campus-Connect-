@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Define a codificação de caracteres utilizada pela página. -->
+    <meta charset="UTF-8">
+
+    <!-- Faz o layout se adaptar corretamente a celulares e tablets. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Define o título exibido na aba do navegador. -->
+    <title>Entrar - Campus Connect</title>
+
+    <!-- Importa o mesmo arquivo CSS utilizado nas outras páginas do projeto. -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- A classe identifica a página de login dentro do CSS compartilhado. -->
+<body class="pagina-login">
+    <!-- Caixa principal que reúne o formulário e o painel de apresentação. -->
+    <main class="login-container">
+        <!-- Área esquerda: formulário para entrar na plataforma. -->
+        <section class="login-formulario">
+            <!-- Logo que identifica o Campus Connect. -->
+            <a href="index.html" class="login-marca" aria-label="Voltar para a página inicial">
+                <img src="Logo.l.png" alt="Logo Campus Connect">
+                <span>Campus Connect</span>
+            </a>
+
+            <!-- Título e orientação para o usuário. -->
+            <h1>Bem-vindo de volta!</h1>
+            <p class="login-introducao">Entre com seus dados para acessar sua conta.</p>
+
+            <!--
+                Protótipo visual: ao enviar, o formulário abre a página inicial.
+                A autenticação real precisará de JavaScript e banco de dados futuramente.
+            -->
+            <form action="index.html" method="get">
+                <!-- Campo destinado ao e-mail institucional. -->
+                <label for="login-email">E-mail institucional</label>
+                <input
+                    type="email"
+                    id="login-email"
+                    name="email"
+                    placeholder="seu.nome@faculdade.edu.br"
+                    autocomplete="email"
+                    required
+                >
+
+                <!-- Campo destinado à senha do usuário. -->
+                <label for="login-senha">Senha</label>
+                <input
+                    type="password"
+                    id="login-senha"
+                    name="senha"
+                    placeholder="Digite sua senha"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <!-- Opções para lembrar o acesso ou recuperar a senha. -->
+                <div class="login-opcoes">
+                    <label class="lembrar-login" for="lembrar">
+                        <input type="checkbox" id="lembrar" name="lembrar">
+                        <span>Lembrar de mim</span>
+                    </label>
+
+                    <!-- Link visual; a recuperação será implementada futuramente. -->
+                    <a href="#">Esqueci minha senha</a>
+                </div>
+
+                <!-- Envia o formulário após validar os campos obrigatórios. -->
+                <button type="submit" class="botao-login">Entrar</button>
+            </form>
+
+            <!-- Direciona novos usuários para a página de cadastro. -->
+            <p class="ir-cadastro">
+                Ainda não tem uma conta? <a href="Cadastro.html">Criar conta</a>
+            </p>
+
+            <!-- Permite retornar à página inicial sem realizar o login. -->
+            <div class="login-voltar">
+                <a href="index.html">← Voltar para a página principal</a>
+            </div>
+        </section>
+
+        <!-- Área direita: mensagem de apresentação da plataforma. -->
+        <section class="login-informacoes">
+            <p class="login-etiqueta">SUA COMUNIDADE ACADÊMICA</p>
+            <h2>Conecte pessoas, ideias e oportunidades.</h2>
+            <p>
+                Acesse grupos de estudo, eventos, materiais e projetos da sua
+                faculdade em um só lugar.
+            </p>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,810 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    /* Remove os espaçamentos automáticos e inclui bordas no cálculo das medidas. */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Deixa a navegação pelas âncoras da página mais suave. */
+    scroll-behavior: smooth;
+}
+
+body {
+    /* Define a fonte e a cor padrão dos textos de todas as páginas. */
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+/* Aplica o fundo azul somente à página inicial. */
+.pagina-inicial {
+    background-color: blue;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    /* Organiza a marca e o menu lado a lado. */
+    width: 100%;
+    background-color: rgb(39, 2, 134);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 8%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.marca {
+    /* Alinha a logo e o nome do projeto. */
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    /* Controla o tamanho da logo sem deformar a imagem. */
+    width: 55px;
+    height: auto;
+}
+
+.marca h1 {
+    /* Formata o nome Campus Connect no cabeçalho. */
+    font-size: 25px;
+    color: white;
+}
+
+/* =========================
+   MENU
+========================= */
+
+nav {
+    /* Organiza os links do menu em linha. */
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    /* Remove o sublinhado e formata os links do menu. */
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    /* Clareia o link quando o cursor passa sobre ele. */
+    color: #cfd3ff;
+}
+
+/* =========================
+   APRESENTAÇÃO
+========================= */
+
+.apresentacao {
+    /* Posiciona o texto e a imagem principal lado a lado. */
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 10%;
+    gap: 50px;
+}
+
+.texto {
+    /* Reserva metade da apresentação para o conteúdo textual. */
+    width: 50%;
+}
+
+.texto h2 {
+    /* Formata o título principal da página. */
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.texto p {
+    /* Melhora a leitura do parágrafo de apresentação. */
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: whitesmoke;
+}
+
+/* =========================
+   BOTÃO / LINK DO CADASTRO
+========================= */
+
+.botao-cadastro {
+    /* Transforma o link em um botão branco de destaque. */
+    display: inline-block;
+    background-color: white;
+    color: rgb(51, 9, 165);
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-cadastro:hover {
+    /* Destaca o botão quando o cursor passa sobre ele. */
+    background-color: black;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* =========================
+   IMAGEM
+========================= */
+
+.imagem-apresentacao {
+    /* Centraliza a ilustração dentro da apresentação. */
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.imagem-apresentacao img {
+    /* Torna a imagem flexível e evita distorções. */
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+/* =========================
+   ÁREA DOS CARDS
+========================= */
+
+.area-cards {
+    /* Cria uma área clara separada para os recursos da plataforma. */
+    background-color: rgb(223, 223, 223);
+    padding: 70px 8% 120px;
+}
+
+.titulo-cards {
+    /* Centraliza e destaca o título da seção. */
+    text-align: center;
+    color: rgb(39, 2, 134);
+    margin-bottom: 45px;
+    font-size: 30px;
+}
+
+.container-cards {
+    /* Distribui os cards em quatro colunas. */
+    display: grid;
+    grid-template-columns: repeat(4, 230px);
+    justify-content: center;
+    column-gap: 30px;
+    row-gap: 100px;
+}
+
+.card-container {
+    /* Serve como referência para o card e sua descrição. */
+    position: relative;
+}
+
+.card {
+    /* Define o formato, as cores e a animação de cada card. */
+    width: 230px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1717b8, #4747e8);
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+}
+
+.card h2 {
+    /* Formata o texto exibido dentro do card. */
+    color: white;
+    font-size: 17px;
+    text-align: center;
+    padding: 10px;
+}
+
+.card-container:hover .card {
+    /* Eleva o card quando o cursor passa sobre ele. */
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 12px 12px 0 0;
+}
+
+.card-container::after {
+    /* Cria a descrição escondida usando o atributo data-info do HTML. */
+    content: attr(data-info);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    min-height: 60px;
+    padding: 12px;
+    box-sizing: border-box;
+    background-color: rgb(70, 137, 179);
+    color: black;
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 1;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.card-container:hover::after {
+    /* Mostra a descrição quando o card recebe o cursor. */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   SOBRE NÓS
+========================= */
+
+/* Cria a área do card antes do rodapé e define o destino do botão “Sobre”. */
+.area-sobre {
+    background-color: rgb(223, 223, 223);
+    padding: 0 8% 80px;
+    scroll-margin-top: 25px;
+}
+
+/* Forma o card branco que reúne as informações sobre o projeto. */
+.sobre-card {
+    max-width: 1050px;
+    margin: 0 auto;
+    background-color: white;
+    border-left: 7px solid rgb(39, 2, 134);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+}
+
+/* Destaca o título principal do card. */
+.sobre-card > h2 {
+    color: rgb(39, 2, 134);
+    font-size: 30px;
+    margin-bottom: 16px;
+}
+
+/* Formata o texto que explica quem criou o Campus Connect. */
+.sobre-introducao {
+    color: #444;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+/* Distribui missão, visão e valores em três colunas. */
+.sobre-detalhes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Cria uma pequena área destacada para cada princípio do projeto. */
+.sobre-item {
+    background-color: #f1f1ff;
+    border-radius: 9px;
+    padding: 22px;
+}
+
+/* Formata os títulos Missão, Visão e Valores. */
+.sobre-item h3 {
+    color: rgb(23, 23, 184);
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+/* Melhora a leitura dos textos internos do card. */
+.sobre-item p {
+    color: #4b4b4b;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    /* Formata o rodapé da página inicial. */
+    background-color: #bec1c9;
+    color: rgb(23, 23, 169);
+    text-align: center;
+    padding: 30px;
+}
+
+footer p {
+    /* Cria um pequeno espaço entre as linhas do rodapé. */
+    margin: 5px;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 1100px) {
+    /* Em telas médias, reduz a grade para duas colunas. */
+    .container-cards {
+        grid-template-columns: repeat(2, 230px);
+    }
+}
+
+@media (max-width: 800px) {
+    /* Em tablets, empilha o cabeçalho e reorganiza a apresentação. */
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .apresentacao {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 8%;
+    }
+
+    .texto,
+    .imagem-apresentacao {
+        width: 100%;
+    }
+
+    .texto h2 {
+        font-size: 36px;
+    }
+
+    /* Em tablets, mostra missão, visão e valores um abaixo do outro. */
+    .sobre-detalhes {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+    /* Em celulares, exibe apenas um card por linha. */
+    .container-cards {
+        grid-template-columns: 230px;
+    }
+
+    /* Reduz os espaços do card Sobre nós em celulares. */
+    .sobre-card {
+        padding: 28px 22px;
+    }
+}
+
+/* =========================
+   PÁGINA DE CADASTRO
+   Os seletores começam com .pagina-cadastro para não alterar a página inicial.
+========================= */
+
+/* Centraliza a caixa de cadastro sobre um fundo cinza-claro. */
+.pagina-cadastro {
+    background-color: rgb(223, 223, 223);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px 15px;
+}
+
+/* Organiza o formulário e as informações em uma única caixa. */
+.pagina-cadastro .container {
+    display: flex;
+    width: 800px;
+    max-width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Reserva metade da caixa para o formulário de cadastro. */
+.pagina-cadastro .cadastro {
+    width: 50%;
+    padding: 30px;
+}
+
+/* Reserva a outra metade para as vantagens da plataforma. */
+.pagina-cadastro .informacoes {
+    width: 50%;
+    background-color: rgb(23, 23, 184);
+    color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+/* Posiciona a logo no canto superior esquerdo do painel azul. */
+.pagina-cadastro .cadastro-logo {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 115px;
+    height: auto;
+}
+
+/* Mantém os textos informativos agrupados no centro do painel. */
+.pagina-cadastro .informacoes-conteudo {
+    width: 100%;
+}
+
+/* Destaca o título principal do formulário. */
+.pagina-cadastro .cadastro h1 {
+    color: rgb(23, 23, 184);
+    margin-bottom: 10px;
+}
+
+/* Formata o texto de orientação abaixo do título. */
+.pagina-cadastro .cadastro > p {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+/* Destaca os nomes dos campos do formulário. */
+.pagina-cadastro label {
+    font-weight: bold;
+}
+
+/* Padroniza os campos de nome, curso, semestre, e-mail e senha. */
+.pagina-cadastro input[type="text"],
+.pagina-cadastro input[type="email"],
+.pagina-cadastro input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+/* Cria espaço ao redor da área expansível dos termos. */
+.pagina-cadastro .termos {
+    margin: 5px 0 15px;
+}
+
+/* Mostra que o título dos termos pode ser clicado. */
+.pagina-cadastro .termos summary {
+    color: rgb(23, 23, 184);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Formata os parágrafos internos dos termos. */
+.pagina-cadastro .termos p {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #555;
+    margin-top: 12px;
+}
+
+/* Mantém a caixa de seleção ao lado do texto de aceite. */
+.pagina-cadastro .aceitar-termos {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    margin: 15px 0;
+}
+
+/* Alinha verticalmente a caixa de seleção com o texto. */
+.pagina-cadastro .aceitar-termos input {
+    margin-top: 3px;
+}
+
+/* Ajusta o tamanho do texto de aceite. */
+.pagina-cadastro .aceitar-termos label {
+    font-size: 14px;
+}
+
+/* Transforma o link de criação da conta em um botão azul. */
+.pagina-cadastro .botao-criar {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: rgb(23, 23, 184);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Clareia o botão quando o cursor passa sobre ele. */
+.pagina-cadastro .botao-criar:hover {
+    background-color: rgb(60, 60, 220);
+}
+
+/* Centraliza o atalho para usuários que já possuem conta. */
+.pagina-cadastro .entrar {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Padroniza os links de entrada e retorno. */
+.pagina-cadastro .entrar a,
+.pagina-cadastro .voltar {
+    color: rgb(23, 23, 184);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Define o tamanho do título do painel informativo. */
+.pagina-cadastro .informacoes h2 {
+    font-size: 25px;
+}
+
+/* Formata as vantagens apresentadas no painel informativo. */
+.pagina-cadastro .informacoes p {
+    font-size: 17px;
+    margin-top: 15px;
+}
+
+/* Posiciona o link de retorno abaixo do formulário. */
+.pagina-cadastro .voltar-area {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Em celulares, coloca o painel informativo abaixo do formulário. */
+@media (max-width: 700px) {
+    .pagina-cadastro .container {
+        flex-direction: column;
+    }
+
+    .pagina-cadastro .cadastro,
+    .pagina-cadastro .informacoes {
+        width: 100%;
+    }
+
+    /* Reserva espaço para a logo quando o painel azul fica abaixo do formulário. */
+    .pagina-cadastro .informacoes {
+        padding-top: 145px;
+        padding-bottom: 45px;
+    }
+}
+
+/* =========================
+   PÁGINA DE LOGIN
+   Os seletores começam com .pagina-login para não alterar as outras páginas.
+========================= */
+
+/* Centraliza o login e aplica um fundo em degradê. */
+.pagina-login {
+    background: linear-gradient(135deg, rgb(23, 23, 184), rgb(39, 2, 134));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px 15px;
+}
+
+/* Organiza o formulário e a apresentação em uma única caixa. */
+.pagina-login .login-container {
+    display: flex;
+    width: 850px;
+    max-width: 100%;
+    background-color: white;
+    border-radius: 14px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.28);
+    overflow: hidden;
+}
+
+/* Reserva a parte esquerda da caixa para o formulário. */
+.pagina-login .login-formulario {
+    width: 55%;
+    padding: 40px;
+}
+
+/* Organiza a logo e o nome da plataforma na mesma linha. */
+.pagina-login .login-marca {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: rgb(39, 2, 134);
+    font-size: 19px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 35px;
+}
+
+/* Controla o tamanho da logo sem deformar a imagem. */
+.pagina-login .login-marca img {
+    width: 45px;
+    height: auto;
+}
+
+/* Formata o título principal do formulário. */
+.pagina-login .login-formulario h1 {
+    color: rgb(23, 23, 184);
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* Formata a orientação mostrada abaixo do título. */
+.pagina-login .login-introducao {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+/* Destaca os nomes dos campos do formulário. */
+.pagina-login .login-formulario form > label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+/* Padroniza os campos de e-mail e senha. */
+.pagina-login input[type="email"],
+.pagina-login input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #aaa;
+    border-radius: 7px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Destaca o campo que está sendo preenchido. */
+.pagina-login input[type="email"]:focus,
+.pagina-login input[type="password"]:focus {
+    border-color: rgb(23, 23, 184);
+    box-shadow: 0 0 0 3px rgba(23, 23, 184, 0.12);
+}
+
+/* Mantém as opções de acesso nas extremidades da mesma linha. */
+.pagina-login .login-opcoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 22px;
+    font-size: 14px;
+}
+
+/* Alinha a caixa de seleção com o texto “Lembrar de mim”. */
+.pagina-login .lembrar-login {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+}
+
+/* Padroniza o link de recuperação da senha. */
+.pagina-login .login-opcoes a {
+    color: rgb(23, 23, 184);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Formata o botão principal do login. */
+.pagina-login .botao-login {
+    width: 100%;
+    padding: 13px;
+    background-color: rgb(23, 23, 184);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Destaca o botão quando o cursor passa sobre ele. */
+.pagina-login .botao-login:hover {
+    background-color: rgb(60, 60, 220);
+    transform: translateY(-2px);
+}
+
+/* Centraliza o convite para criar uma nova conta. */
+.pagina-login .ir-cadastro {
+    color: #555;
+    text-align: center;
+    margin-top: 22px;
+}
+
+/* Destaca o link que direciona para o cadastro. */
+.pagina-login .ir-cadastro a {
+    color: rgb(23, 23, 184);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Posiciona o link de retorno abaixo do formulário. */
+.pagina-login .login-voltar {
+    text-align: center;
+    margin-top: 18px;
+}
+
+/* Formata o link de retorno à página principal. */
+.pagina-login .login-voltar a {
+    color: rgb(23, 23, 184);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Cria o painel azul de apresentação na parte direita. */
+.pagina-login .login-informacoes {
+    width: 45%;
+    background: linear-gradient(145deg, rgb(23, 23, 184), rgb(70, 70, 230));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 45px;
+}
+
+/* Formata a pequena etiqueta acima do título do painel. */
+.pagina-login .login-etiqueta {
+    color: #d8daff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 14px;
+}
+
+/* Destaca a mensagem principal do painel. */
+.pagina-login .login-informacoes h2 {
+    font-size: 28px;
+    line-height: 1.25;
+    margin-bottom: 18px;
+}
+
+/* Melhora a leitura do parágrafo do painel. */
+.pagina-login .login-informacoes > p:last-child {
+    color: #eeeeff;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Em celulares e tablets, coloca o painel abaixo do formulário. */
+@media (max-width: 700px) {
+    .pagina-login .login-container {
+        flex-direction: column;
+    }
+
+    .pagina-login .login-formulario,
+    .pagina-login .login-informacoes {
+        width: 100%;
+    }
+
+    .pagina-login .login-formulario {
+        padding: 30px 25px;
+    }
+
+    .pagina-login .login-informacoes {
+        padding: 35px 25px;
+    }
+}
+
+/* Em celulares pequenos, empilha as opções abaixo dos campos. */
+@media (max-width: 420px) {
+    .pagina-login .login-opcoes {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Define a codificação de caracteres utilizada pela página. -->
+    <meta charset="UTF-8">
+
+    <!-- Faz o layout se adaptar corretamente a celulares e tablets. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Define o título exibido na aba do navegador. -->
+    <title>Criar Conta - Campus Connect</title>
+
+    <!-- Importa o mesmo arquivo CSS externo usado pela página inicial. -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- A classe identifica esta página e evita conflitos com os estilos da página inicial. -->
+<body class="pagina-cadastro">
+    <!-- Caixa principal que reúne o formulário e o painel de informações. -->
+    <div class="container">
+        <!-- Área esquerda: formulário para criação de conta. -->
+        <div class="cadastro">
+            <h1>Criar Conta</h1>
+            <p>Preencha seus dados para começar.</p>
+
+            <!-- Protótipo visual: os dados ainda não são salvos em banco de dados. -->
+            <form>
+                <!-- Campo destinado ao nome completo do estudante. -->
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+                <!-- Campo destinado ao curso do estudante. -->
+                <label for="curso">Seu Curso</label>
+                <input type="text" id="curso" name="curso" placeholder="Digite seu curso" required>
+
+                <!-- Campo destinado ao semestre atual do estudante. -->
+                <label for="semestre">Semestre</label>
+                <input type="text" id="semestre" name="semestre" placeholder="Digite seu semestre" required>
+
+                <!-- Campo destinado ao e-mail institucional. -->
+                <label for="email">Email institucional</label>
+                <input type="email" id="email" name="email" placeholder="seu.nome@faculdade.edu.br" required>
+
+                <!-- Campos usados para criar e confirmar a senha. -->
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Criar uma senha" required>
+
+                <label for="confirmar">Confirmar senha</label>
+                <input type="password" id="confirmar" name="confirmar" placeholder="Confirmar sua senha" required>
+
+                <!-- Área expansível com os termos de uso e privacidade. -->
+                <details class="termos">
+                    <summary>Leia os termos de uso e privacidade</summary>
+
+                    <!-- Explica como os dados pessoais serão utilizados. -->
+                    <p><strong>Privacidade e Proteção dos dados.</strong><br>
+                        O Campus Connect utiliza dados como nome, curso, semestre e e-mail apenas para o funcionamento do sistema. Os dados serão tratados conforme a LGPD e não serão usados para outras finalidades sem autorização.
+                    </p>
+
+                    <!-- Define as regras básicas de uso da plataforma. -->
+                    <p><strong>Uso da plataforma.</strong><br>
+                        O usuário deve utilizar o Campus Connect de forma respeitosa e para fins acadêmicos. Não são permitidas ofensas, ameaças, fraudes, conteúdos ilegais ou uso indevido das informações de outros alunos.
+                    </p>
+
+                    <!-- Informa a responsabilidade sobre encontros presenciais. -->
+                    <p><strong>Encontros entre usuários.</strong><br>
+                        O Campus Connect apenas facilita o contato entre estudantes. Encontros presenciais são de responsabilidade dos próprios usuários, e a plataforma não organiza ou acompanha esses encontros.
+                    </p>
+
+                    <!-- Esclarece que a plataforma não realiza pagamentos ou negociações. -->
+                    <p><strong>Vagas, vendas e pagamentos.</strong><br>
+                        O Campus Connect apenas divulga vagas, oportunidades e produtos de outros usuários. A plataforma não realiza inscrições diretas em vagas, não recebe pagamentos e não participa de negociações entre os usuários.
+                    </p>
+                </details>
+
+                <!-- Confirma que o usuário leu e aceitou os termos apresentados. -->
+                <div class="aceitar-termos">
+                    <input type="checkbox" id="aceitar" name="aceitar" required>
+                    <label for="aceitar">Li e aceito os termos de uso e privacidade.</label>
+                </div>
+
+                <!-- Como o projeto ainda é somente HTML/CSS, este link simula a conclusão do cadastro. -->
+                <a href="index.html" class="botao-criar">Criar Conta</a>
+            </form>
+
+            <!-- Atalho para usuários que já possuem uma conta. -->
+            <div class="entrar">
+                Já tem conta? <a href="Login.html">Entrar</a>
+            </div>
+
+            <!-- Link para retornar à página principal. -->
+            <div class="voltar-area">
+                <a class="voltar" href="index.html">← Voltar para a página principal</a>
+            </div>
+        </div>
+
+        <!-- Área direita: apresenta as principais vantagens da comunidade. -->
+        <div class="informacoes">
+            <!-- Logo posicionada no canto superior da área azul. -->
+            <img src="Logo.l.png" alt="Logo Campus Connect" class="cadastro-logo">
+
+            <!-- Conteúdo informativo mantido no centro do painel. -->
+            <div class="informacoes-conteudo">
+                <h2>Faça parte da comunidade da sua faculdade.</h2>
+                <p>Conecte-se com colegas.</p>
+                <p>Compartilhe conhecimentos.</p>
+                <p>Descubra oportunidades.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
